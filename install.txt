@@ -15,6 +15,9 @@ sudo python3.8 -m pip install redis &>/dev/null
 sudo apt-get install redis-server -y &>/dev/null
 sudo systemctl enable redis-server.service -y &>/dev/null
 echo -e "\rDone download libraries"
+echo -n "Downloading requests.."
+sudo pip3 install requests &>/dev/null
+echo -e "\rDone download requests"
 echo -n "Downloading pm2.." 
 curl -sL https://deb.nodesource.com/setup_12.x | sudo bash - &>/dev/null; sudo apt-get update &>/dev/null; sudo apt install nodejs -y &>/dev/null; npm install -g pm2 &>/dev/null
 echo -e "\rDone download pm2"
